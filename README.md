@@ -1,2 +1,2 @@
 # program-knowledge
-the code way
+The way of code
