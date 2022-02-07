@@ -88,8 +88,9 @@ public class RabbitConfig {
             log.error("code = {}, msg = {}", returned.getReplyCode(), returned.getReplyText());
             log.error("data = {}", returned.getMessage());
         });
-        template.setRetryTemplate(null);
-        template.setRecoveryCallback(null);
+        //todo
+        //template.setRetryTemplate(null);
+        //template.setRecoveryCallback(null);
         return template;
     }
 
