@@ -118,19 +118,19 @@ fields：处于不同的目的，通过不同的方法索引相同的字段通�
 2. 过滤器上下文中，查询的结果可以被缓存。
 ##aggregation聚合
 使用方式：
-`
+```
 GET /indexName/_search
 {
-"size": 20,  #指定返回条数
-"aggs": {  #聚合关键字
-"NAME": {   #返回的名称，类似mysql as 关键字，指定别名
-"AGG_TYPE": {  #哪个聚合函数
-"field": "age"  #聚合字段
+   "size":20,  #指定返回条数
+   "aggs":{  #聚合关键字
+      "NAME":{   #返回的名称，类似mysql as 关键字，指定别名
+         "AGG_TYPE":{  #哪个聚合函数
+            "field":"age"  #聚合字段
+         }
+      }
+   }
 }
-}
-}
-}
-`
+```
 1. max：最大
 2. avg：平均
 3. sum：求和
@@ -141,12 +141,14 @@ GET /indexName/_search
 ##ES执行逻辑
 filter -》 query -》 aggregation
 ##测试分析器
-`
+```
 GET _analyze
 {
-"analyzer": "ik_smart",
-"text": ["牛水奶"]
+    "analyzer":"ik_smart",
+    "text":[
+        "牛水奶"
+    ]
 }
-`
+```
 
 es 7.15后（不包括7。15），不推荐使用 RestHighLevelClient
