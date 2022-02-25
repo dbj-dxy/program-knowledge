@@ -67,6 +67,8 @@ public class RabbitConfig {
         template.setMessageConverter(new Jackson2JsonMessageConverter());
         // 设置附加消息
         template.setCorrelationDataPostProcessor((message, correlationData) -> {
+            // todo 取消该处理器，看confirm 是否有 CorrelationData 或者消费者是否能获取到 AmqpHeaders.CORRELATION_ID，
+            //  若消费者获取不到说明 MessageProperties 即为 amqp 协议的 header（已经证实）
             message.getMessageProperties().setCorrelationId(correlationData.getId());
             return correlationData;
         });
@@ -88,8 +90,10 @@ public class RabbitConfig {
             log.error("code = {}, msg = {}", returned.getReplyCode(), returned.getReplyText());
             log.error("data = {}", returned.getMessage());
         });
-        //todo
+        // todo RetryTemplate -> spring-retry-template
         //template.setRetryTemplate(null);
+        // todo retryTemplate.execute 的 RecoveryCallback 恢复回调（重试成功）
+        // RecoveryCallback 应该产生与 execute(ChannelCallback)返回类型兼容的结果
         //template.setRecoveryCallback(null);
         return template;
     }

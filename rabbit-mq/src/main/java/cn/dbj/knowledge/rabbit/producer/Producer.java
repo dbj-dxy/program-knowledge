@@ -14,6 +14,7 @@ public class Producer {
     private final RabbitTemplate rabbitTemplate;
 
     public void topicMsg() {
+        // todo 此处的 CorrelationData 对应 发布回调的 CorrelationData ，其中的 id 不是 MessageProperties（AmqpHeaders） 中的 correlationId
         rabbitTemplate.convertAndSend("dbj.topic", "dbj.bind.key.t1", "hello", new CorrelationData("00201"));
     }
 }
