@@ -53,7 +53,7 @@ feature/xxx：新的功能、模块开发分支
 hotfix/xxx：修复紧急线上 bug 的分支（不紧急的 bug 归为功能分支）
 
 ---
-*建议*
+*建议*  
 功能分支合并集成分支使用 merge  
 从集成分支拉代码使用 rebase  
 [区别](https://www.jianshu.com/p/4079284dd970)
