@@ -39,9 +39,9 @@ test      增加测试
 ###footer
 **footer** 部分只用于以下两种情况
 1. 不兼容变动
-> 如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法
+> 如果当前代码与上一个版本不兼容，则 footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法
 2. 关闭 Issue
-> 如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 
+> 如果当前 commit 针对某个issue，那么可以在 footer 部分关闭这个 issue 
 ---
 ##git分支规范
 > git 分支分为集成分支、功能分支和修复分支，分别命名为 dev(develop)、feature 和 hotfix，均为单数
