@@ -105,6 +105,7 @@ fields：处于不同的目的，通过不同的方法索引相同的字段通�
 13. boost：查询时权重提升，默认为1
 14. weight：过滤集提升权重
 15. adjust_pure_negative：
+16. track_total_hits：获取超过1w条数据 需要加上  "track_total_hits":true ，不然只能显示出9999条
 ###Query & Filter
 1. Query：查询上下文，会计算_score相关性分数。是在使用query进行查询时的执行环境，例如：  
    1.1. query: {}
