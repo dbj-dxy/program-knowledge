@@ -1,7 +1,7 @@
 package cn.dbj.knowledge.design.creation.factory.abstractfactory;
 
-import cn.d.designpattern.creationmode.factory.simplefactory.IPhone;
-import cn.d.designpattern.creationmode.factory.simplefactory.Phone;
+import cn.dbj.knowledge.design.creation.factory.simplefactory.IPhone;
+import cn.dbj.knowledge.design.creation.factory.simplefactory.Phone;
 
 /**
  * @author DBJ
