@@ -31,4 +31,4 @@
 * 备忘录（Memento）模式：在不破坏封装性的前提下，获取并保存一个对象的内部状态，以便以后恢复它。
 * 解释器（Interpreter）模式：提供如何定义语言的文法，以及对语言句子的解释方法，即解释器。
 ![](assets/design.jpg)
-![](assets/GoF.png)
+![](assets/gof.png)
