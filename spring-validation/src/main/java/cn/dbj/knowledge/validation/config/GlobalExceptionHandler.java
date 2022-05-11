@@ -44,7 +44,7 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * get params exception
+     * form argument exception
      */
     @ExceptionHandler(BindException.class)
     public ResultVO<?> bindExceptionHandler(BindException e) {
@@ -54,7 +54,7 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * request body(form) argument exception
+     * PathVariable / RequestParam argument exception
      */
     @ExceptionHandler(ConstraintViolationException.class)
     public ResultVO<?> constraintViolationExceptionHandler(ConstraintViolationException e) {
@@ -64,7 +64,7 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * request body(json) argument exception
+     * RequestBody argument exception
      */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResultVO<?> methodArgumentNotValidExceptionHandler(MethodArgumentNotValidException e) {
