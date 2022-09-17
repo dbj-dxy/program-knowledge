@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class BioClient {
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         Socket socket = new Socket();
         socket.connect(new InetSocketAddress("localhost", 6666));
         while (true) {
