@@ -62,6 +62,7 @@ public class RabbitConfig {
         // 生产者和消费者使用不同的Connection
         template.setUsePublisherConnection(true);
         // 将mandatory属性设为true（ReturnCallback需要，ConfirmCallback不需要）
+        // 当把 mandatory 参数设置为 true 时，如果交换机无法将消息进行路由时，会将该消息返回给生产者，而如果该参数设置为false，如果发现消息无法进行路由，则直接丢弃。
         template.setMandatory(true);
         // 设置消息转换器
         template.setMessageConverter(new Jackson2JsonMessageConverter());
