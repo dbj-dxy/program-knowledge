@@ -29,12 +29,12 @@ docker network create elastic
 
 ```shell
 docker run -d 
---name mysql5.7 
+--name mysql8.0 
 -p 3306:3306 
 -e MYSQL_ROOT_PASSWORD=123456 
--v /Users/tezign/volumes/mysql/config/my.cnf:/etc/mysql/my.cnf 
+-v /Users/tezign/volumes/mysql/config:/etc/mysql/conf.d
 -v /Users/tezign/volumes/mysql/data:/var/lib/mysql 
-amd64/mysql:5.7
+arm64v8/mysql:8.0
 ```
 
 ```shell
