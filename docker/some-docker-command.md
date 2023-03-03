@@ -4,8 +4,8 @@ docker run -d
 --net elastic 
 -p 5601:5601 
 -e "ELASTICSEARCH_HOSTS=http://es7.15.2:9200" 
--v /Users/tezign/volumes/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml 
--v /Users/tezign/volumes/kibana/data:/usr/share/kibana/data 
+-v /docker/volumes/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml 
+-v /docker/volumes/kibana/data:/usr/share/kibana/data 
 docker.elastic.co/kibana/kibana:7.15.2
 ```
 
@@ -17,9 +17,9 @@ docker run  -d
 -p 9300:9300 
 -e "discovery.type=single-node" 
 -e ES_JAVA_OPTS="-Xms512m -Xmx512m" 
--v /Users/tezign/volumes/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml 
--v /Users/tezign/volumes/elasticsearch/data:/usr/share/elasticsearch/data 
--v /Users/tezign/volumes/elasticsearch/plugins:/usr/share/elasticsearch/plugins 
+-v /docker/volumes/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml 
+-v /docker/volumes/elasticsearch/data:/usr/share/elasticsearch/data 
+-v /docker/volumes/elasticsearch/plugins:/usr/share/elasticsearch/plugins 
 docker.elastic.co/elasticsearch/elasticsearch:7.15.2
 ```
 
@@ -32,8 +32,8 @@ docker run -d
 --name mysql8.0 
 -p 3306:3306 
 -e MYSQL_ROOT_PASSWORD=123456 
--v /Users/tezign/volumes/mysql/config:/etc/mysql/conf.d
--v /Users/tezign/volumes/mysql/data:/var/lib/mysql 
+-v /docker/volumes/mysql/config:/etc/mysql/conf.d
+-v /docker/volumes/mysql/data:/var/lib/mysql 
 arm64v8/mysql:8.0
 ```
 
@@ -41,8 +41,8 @@ arm64v8/mysql:8.0
 docker run -d
 --name redis6.2 
 -p 6379:6379 
--v /Users/tezign/volumes/redis/config/redis.config:/usr/local/etc/redis/redis.config 
--v /Users/tezign/volumes/redis/data:/data 
+-v /docker/volumes/redis/config/redis.config:/usr/local/etc/redis/redis.config 
+-v /docker/volumes/redis/data:/data 
 arm64v8/redis:6.2
 ```
 
