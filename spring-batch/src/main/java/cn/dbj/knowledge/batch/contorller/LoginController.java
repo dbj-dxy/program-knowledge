@@ -1,4 +1,4 @@
-package cn.dbj.knowledge.security.contorller;
+package cn.dbj.knowledge.batch.contorller;
 
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Value;

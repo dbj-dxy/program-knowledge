@@ -3,6 +3,7 @@
 -Xms  堆最小值  
 -Xmx  堆最大值    
 -Xmn  新生代大小（默认已分配堆内存1/4）  
+当 JVM 是默认 8 字节对齐，建议配置最大堆内存不要超过 32 G，否则会影响 JVM 的指针压缩技术，浪费内存。  
 -XX:SurvivorRatio  Eden和Survivor的比例（默认8，即E8:S.from1:S.to1）  
 -verbose:gc  在控制台输出GC情况  
 -XX:+PrintGCDetails   在控制台输出详细的GC情况  

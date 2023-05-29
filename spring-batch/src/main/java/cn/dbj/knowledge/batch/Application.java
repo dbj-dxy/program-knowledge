@@ -1,4 +1,4 @@
-package cn.dbj.knowledge.security;
+package cn.dbj.knowledge.batch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
