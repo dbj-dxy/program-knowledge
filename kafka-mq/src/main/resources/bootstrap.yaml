@@ -1,4 +1,4 @@
 spring:
   application:
-    name: rocket-mq
+    name: kafka-mq
 

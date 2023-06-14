@@ -1,4 +1,4 @@
 spring:
   application:
-    name: rabbit-mq
+    name: rocket-mq
 
